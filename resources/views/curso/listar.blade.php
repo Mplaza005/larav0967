@@ -15,8 +15,13 @@
         <td>{{$curso->descripcion}}</td>
         <td>{{$curso->urlPdf}}</td>
         <td> <iframe src="{{ 'http://localhost/larav0967/public/storage/imagenes/' .$curso->urlPdf }}"  frameborder="0"></iframe></td>
-       
-        <br>
+        <td><a href="{{route('curso.show',$curso->id)}}">Mostrar</a></td>
+        
+        <form action="{{route('curso.destroy',$curso->id)}}" method="POST">
+            @csrf
+            @method('delete')
+            <button type="submit">Eliminar</button>
+         </form>
         
     </tr>
 @endforeach

@@ -35,4 +35,20 @@ class CursoController extends Controller
         return redirect()->route('curso.index');
   
      }
+
+     public function show(Curso $curso){
+
+      return view('curso.show',compact('curso'));
+
+
+  }
+
+  public function destroy (Curso $curso){
+            
+   $curso->delete();
+   return redirect()->route('curso.index');
+}
+
+
+
 }
