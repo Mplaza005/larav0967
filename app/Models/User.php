@@ -42,4 +42,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+  public function profile(){
+        //$profile = Profile::where('user_id',$this->id)->first();
+        //$profile = Profile::where('foreing_key',$this->local_key)->first();
+        //return $this->hasOne('App\Models\Profile','foreing_key','local_key'); 
+        return $this->hasOne('App\Models\Profile'); 
+
+    }
+
+
 }
