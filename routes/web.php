@@ -32,3 +32,10 @@ Route::delete('curso/{curso}',[CursoController::class,'destroy'])->name('curso.d
 Route::get('curso/{curso}/editar',[CursoController::class,'edit'])->name('curso.edit');
 
 
+
+////////////////////         PROFILE          ///////////////////////
+
+Route::get('profile/create',[ProfileController::class,'create']);
+Route::post('profile/store', [ProfileController::class,'store'])->name('profile.store');
+
+

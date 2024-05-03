@@ -51,5 +51,10 @@ class User extends Authenticatable
 
     }
 
+      // Relacion Uno a Muchos 
+      public function posts(){
+        return $this->hasMany('App\Models\Post');//RECUPERAR LA COLECCION DE POST QUE PERTENECEN A ESTE USUARIO
+    }
+
 
 }

@@ -14,8 +14,8 @@ class CursoController extends Controller
     // $temp=User::find(1);
     // return $temp->profile;
 
-    $profile=Profile::find(1);
-    return $profile->user;
+    // $profile=Profile::find(1);
+    // return $profile->user;
       // $cursos = Curso::orderBy('id', 'desc')->get();
       //  return view('curso.listar', compact('cursos'));
 
